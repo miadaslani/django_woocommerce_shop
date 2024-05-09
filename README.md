@@ -1,0 +1,1 @@
+# django_woocommerce_shop
