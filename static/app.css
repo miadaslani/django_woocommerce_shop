@@ -1,0 +1,25 @@
+/* 
+
+html{
+    margin: 0px;
+}
+body{
+    background-color: blueviolet;
+} */
+
+*{
+    box-sizing: border-box;
+
+}
+
+html{font-family: serif;}
+
+body{
+    margin: 0px;
+
+}
+
+h1,h2,h3{
+    font-family: serif;
+    font-weight: bold
+}

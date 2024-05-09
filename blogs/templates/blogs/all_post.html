@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block page_title %}
+ posts
+{% endblock %}
+
+{% block page_content %}
+{% for post in b %}
+{% include 'blogs/includes/post.html' %}
+{% endfor %}
+{% endblock %}

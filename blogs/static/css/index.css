@@ -1,0 +1,98 @@
+#main-navigation{
+    width: 100%;
+    height: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    padding: 5px 20px;
+    background: linear-gradient(to right top, blue,rgb(83, 83, 248));
+}
+#main-navigations a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+#main-navigations a:hover,
+#main-navigations a:active{
+    color: blueviolet;
+}
+#main-navigations h1 a:hover,
+#main-navigations h1 a:active{
+    color: #6405bd;
+}
+
+#welcome{
+    background: linear-gradient(to right top, blue);
+}
+#welcome header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+#welcome img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 12px;
+    background-color: #8e8ef5;
+    transform: rotatez(-5deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+#latest-posts{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 60rem;
+    margin: 10ox auto;
+    box-shadow: 1px 1px 12px rgba(0,0,0,.4);
+}
+#latest-posts li{
+    flex: 1rem;
+}
+#latest-posts a{
+    gap: 1rem;
+}
+#about{
+    text-align: center;
+    padding: 3rem;
+    background-color: #7c7474;
+    margin-top: 5rem;
+}
+#about h2{
+    font-size: 3rem;
+    color: white;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right top, blue);
+    
+}
+.post img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 12px;
+    background-color: #8e8ef5;
+    transform: rotatez(-5deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+#post2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right top, blue);
+}
+
+#post2:hover
+#post2:active{
+    background-color: aqua;
+}

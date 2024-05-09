@@ -1,0 +1,12 @@
+{% load static %}
+<li>
+<article class="post">
+    <a href="{% url 'post_details' slug=post.slug %}">
+    <img src="{% static 'blogs/images/'|add:post.image %}">
+    <div id="post2">
+        <h3>{{post.title}}</h3>
+        <p>{{post.short_description}}</p>
+        <p>{{post.content}}</p>
+    </div>
+</a></article></li>
+

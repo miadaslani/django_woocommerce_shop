@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+    list of month...
+{% endblock %}
+
+
+{% block header_reference %}
+{% include 'shop/includes/shared.html' with acd='1234'%}
+<link rel="stylesheet" href="{% static 'css/test.css' %}">
+<!-- <style>
+body{
+    background-color: bisque;
+    font-size: 50px;
+    
+}
+p{
+    text-align: center;
+    background-color: blueviolet;
+}
+</style> -->
+<p>{{'django class'}}</p>
+<p>length str:{{'django class'|length}}</p>
+<p>{{'django class'|upper}}</p>
+<p>{{'django class'|lower}}</p>
+<h1>Total:{{a}} And {{b}} == {{a|add:b}}</h1>
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'css/test.css' %}">
+{% for i in month %}
+<ul><li><a href='{{i}}'</a>{{i}}</li></ul>
+{% endfor %}
+{% endblock %}
+

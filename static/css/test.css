@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+    font-size: 50px;
+    
+}
+p{
+    text-align: center;
+    background-color: blueviolet;
+    color: black;
+}
+a{
+    color: darkred;
+    
+}
+ul{
+    text-align: center
+}

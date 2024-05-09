@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+Page Index
+{% endblock %}
+{% block header_reference %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block page_content %}
+<!-- welcom to my blogs
+{{a}} -->
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blogs/images/django.png' %}">
+            <h1>
+                <p>my name is miad</p>
+            </h1>
+        </header>
+    </section>
+    <section id="latest-posts">
+        <ul>
+            <!-- <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+        </ul> -->
+
+        {% for post in a %}
+        <li>
+            {% include 'blogs/includes/post.html' %}
+          
+        </li>
+        {% endfor %}
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>tel:284838475874</p>
+        <p>Address:test@gmail.com</p>
+    </section>
+{% endblock %}
