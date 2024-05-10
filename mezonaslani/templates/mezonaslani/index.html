@@ -144,57 +144,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    {% for item in product %}
                     <div class="single_product_iner">
                         <div class="row align-items-center justify-content-between">
                             <div class="col-lg-6 col-sm-6">
                                 <div class="single_product_img">
-                                    <img src="{% static 'img/single_product_1.png' %}" class="img-fluid" alt="#">
+                                    <img src="{{MEDIA_URL}}{{item.picture}}" class="img-fluid" alt="#">
                                     <img src="{% static 'img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
                                 </div>
                             </div>
                             <div class="col-lg-5 col-sm-6">
                                 <div class="single_product_content">
-                                    <h5>شروع قیمت از 50000 تومان</h5>
-                                    <h2> <a href="single-product.html"></a> کوسن مربعی طرح دار پر شده با الیاف مصنوعی</h2>
-                                    <a href="product_list.html" class="btn_3">امتحان کنید</a>
+                                    <h5> {{item.price}} تومان</h5>
+                                    <h2> <a href="{{item.slug}}"></a>{{item.name}}</h2>
+                                    <a href="{% url 'shop' %}{{item.slug}}" class="btn_3">امتحان کنید</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="single_product_iner">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_img">
-                                    <img src="{% static 'img/single_product_2.png' %}" class="img-fluid" alt="#">
-                                    <img src="{% static 'img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-sm-6">
-                                <div class="single_product_content">
-                                    <h5>شروع قیمت از 50000 تومان</h5>
-                                    <h2> <a href="single-product.html">کوسن مربعی پر شده با الیاف مصنوعی</a> </h2>
-                                    <a href="product_list.html" class="btn_3">امتحان کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_product_iner">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_img">
-                                    <img src="{% static 'img/single_product_3.png' %}" class="img-fluid" alt="#">
-                                    <img src="{% static 'img/product_overlay.png' %}" alt="#" class="product_overlay img-fluid">
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-sm-6">
-                                <div class="single_product_content">
-                                    <h5>شروع قیمت از 50000 تومان</h5>
-                                    <h2> <a href="single-product.html">فوم قابل استفاده در بالش</a> </h2>
-                                    <a href="product_list.html" class="btn_3">امتحان کنید</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -213,88 +181,23 @@
                 </div>
             </div>
             <div class="row">
+                {% for item in product %}
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_product_item">
                         <div class="single_product_item_thumb">
-                            <img src="{% static 'img/tranding_item/tranding_item_1.png' %}" alt="#" class="img-fluid">
+                            <img src="{{MEDIA_URL}}{{item.picture}}" alt="#" class="img-fluid">
                         </div>
-                        <h3> <a href="single-product.html">بالش دور گردنی مخصوص مسافرت
+                        <h3> <a href="{% url 'shop' %}{{item.slug}}">{{item.name}}
                         </a> </h3>
-                        <p>شروع قیمت از 20000 تومان</p>
+                        <p> {{item.price}} تومان</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_product_item">
-                        <img src="{% static 'img/tranding_item/tranding_item_2.png' %}" alt="#" class="img-fluid">
-                        <h3> <a href="single-product.html">بالشتک های طبی از جنس فوم</a> </h3>
-                        <p>شروع قیمت از 20000 تومان</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_product_item">
-                        <img src="{% static 'img/tranding_item/tranding_item_3.png' %}" alt="#" class="img-fluid">
-                        <h3> <a href="single-product.html">بالش های طبی از جنس فوم و کتان</a> </h3>
-                        <p>شروع قیمت از 20000 تومان</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_product_item">
-                        <img src="{% static 'img/tranding_item/tranding_item_4.png' %}" alt="#" class="img-fluid">
-                        <h3> <a href="single-product.html"></a> بالش دور گردنی مخصوص مسافرت</h3>
-                        <p>شروع قیمت از 20000 تومان</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_product_item">
-                        <img src="{% static 'img/tranding_item/tranding_item_5.png' %}" alt="#" class="img-fluid">
-                        <h3> <a href="single-product.html">فوم و کتان مخصوص بالش های طبی</a> </h3>
-                        <p>شروع قیمت از 20000 تومان</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_product_item">
-                        <img src="{% static 'img/tranding_item/tranding_item_6.png' %}" alt="#" class="img-fluid">
-                        <h3> <a href="single-product.html">بالش دور گردنی طبی مخصوص مسافرت</a> </h3>
-                        <p>شروع قیمت از 20000 تومان</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
     <!-- trending item end-->
 
-    <!-- client review part here -->
-    <section class="client_review " style="direction: ltr">
-        <div class="container" >
-            <div class="row justify-content-center" >
-                <div class="col-lg-8">
-                    <div class="client_review_slider owl-carousel " >
-                        <div class="single_client_review" dir="rtl" >
-                            <div class="client_img" >
-                                <img src="{% static 'img/client.png' %}" alt="#">
-                            </div>
-                            <p >"استفاده از بالش های طبی را در سفرهای طولانی مدت پیشنهاد می کنم.</p>
-                            <h5  >- رضا محمدی</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_1.png' %}" alt="#">
-                            </div>
-                            <p >"برای جلوگیری از گردن درد گزینه های مناسبی هستند.</p>
-                            <h5 >- امیر امیری</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_2.png' %}" alt="#">
-                            </div>
-                            <p >"برای نشستن های طولانی مدت روی مبل قابل قبول اند.</p>
-                            <h5 >- محمد موسوی</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- client review part end -->
 
 
@@ -347,16 +250,19 @@
     <section class="subscribe_part section_padding">
         <div class="container">
             <div class="row justify-content-center">
+                <form method="POST">
+                {% csrf_token %}
                 <div class="col-lg-8">
                     <div class="subscribe_part_content" style="direction: rtl">
                         <h2>به روز رسانی و مطالب پیشرفته!</h2>
                         <p>ما سعی در ارائه محصولات با کیفیت تر و با دوام تر با توجه با استانداردهای روز جهان داریم .</p>
                         <div class="subscribe_form">
-                            <input type="email" placeholder="ایمیل خود را وارد کنید">
-                            <a href="#" class="btn_1">تایید پرداخت</a>
+                            {{form}}
+                            <button type="submit" class="btn_3">مشاوره رایگان</button>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </section>

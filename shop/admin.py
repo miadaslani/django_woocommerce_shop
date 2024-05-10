@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 from bidi.algorithm import get_display
+from accounts.models import Counseling
 # Register your models here.
 
 class BrandAdmin(admin.ModelAdmin):
@@ -25,4 +26,5 @@ admin.site.register(Product,ProductAdmin)
 admin.site.register(Brand,BrandAdmin)
 admin.site.register(Customer)
 admin.site.register(Manufacture)
+admin.site.register(Counseling)
 

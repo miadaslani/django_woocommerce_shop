@@ -10,7 +10,7 @@ class UserRegisterForm(forms.Form):
     last_name=forms.CharField(max_length=20,widget=forms.TextInput(attrs={'placeholder':'لطفا نام خانوادگیتون رو وارد کنید'}))
     password_1=forms.CharField(max_length=20,widget=forms.PasswordInput(attrs={'placeholder':'لطفا یک رمز وارد کنید'}))
     password_2=forms.CharField(max_length=20,widget=forms.PasswordInput(attrs={'placeholder':'رمز را مجدد وارد کنید'}))
- 
+
     def clean_user_name(self):
         user=self.cleaned_data['user_name']
         if User.objects.filter(username=user).exists():
@@ -43,3 +43,5 @@ class UserChangePasswordForm(forms.Form):
     old_password = forms.CharField(widget=forms.PasswordInput())
     new_password1 = forms.CharField(widget=forms.PasswordInput())
     new_password2 = forms.CharField(widget=forms.PasswordInput())
+
+

@@ -41,7 +41,7 @@ def viewLogin(request):
         form_login=UserLoginForm()
     if request.user.is_authenticated:
         a = Name.objects.all()
-        return render (request, 'accounts/index.html',{'a':a})
+        return render(request, 'accounts/index.html',{'a':a})
     return render(request,'accounts/signin.html',{'form_login':form_login})
 
 
