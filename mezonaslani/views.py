@@ -7,7 +7,7 @@ from accounts.models import Counseling
 #-----------------------------صفحه اصلی
 def main_page(request):
     name_record = Name.objects.all()
-    product_record = Product.objects.all()
+    product_record = Product.objects.order_by('-id')[:6]
     if request.method == 'POST':
         form_counseling = CounselingForm(request.POST)
         if form_counseling.is_valid():

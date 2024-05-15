@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "month",
     'blogs',
     "accounts",
+    "checkouts",
 ]
 
 MIDDLEWARE = [

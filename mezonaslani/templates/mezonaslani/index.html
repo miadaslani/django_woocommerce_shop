@@ -48,49 +48,42 @@
                                     <a class="nav-link" href="{% url 'home' %}">{% for i in a %}{{i.name1}}{% endfor %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/about/">{% for i in a %}{{i.name2}}{% endfor %}</a>
+                                    <a class="nav-link" href="{% url 'about' %}">{% for i in a %}{{i.name2}}{% endfor %}</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog/" id="navbarDropdown_1"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name3}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="{% url 'shop' %}"> لیست محصولات</a>
-                                        <a class="dropdown-item" href="single-product.html">جزئیات محصولات</a>
                                         
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog/" id="navbarDropdown_3"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name4}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/accounts/"> 
+                                        <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                             ورود
                                             
                                         </a>
-                                        <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
                                         <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
-                                        <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                        <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                        
+                                        
                                     </div>
                                 </li>
                                 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog/" id="navbarDropdown_2"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name5}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="blog/"> وبلاگ</a>
-                                        <a class="dropdown-item" href="single-blog.html">صفحه داخلی وبلاگ </a>
+                                        <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
                                     </div>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">{% for i in a %}{{i.name6}}{% endfor %}</a>
                                 </li>
                             </ul>
                         </div>
@@ -124,16 +117,16 @@
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1>بالاترین کیفیت
-                                بالش و کوسن</h1>
-                            <p>تنوع در طرح و رنگ، انواع طبی و تزئینی</p>
-                            <a href="http://127.0.0.1:8000/shop/" class="btn_1">همین الان خرید کنید</a>
+                                مانتو و پالتو</h1>
+                            <p>تنوع در طرح و رنگ</p>
+                            <a href="{% url 'shop' %}" class="btn_1">همین الان خرید کنید</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="banner_img" >
-            <img src="{% static 'img/banner.png' %}" alt="#" class="img-fluid" >
+            <img src="{% static 'img/cropped-cropped-PicsArt_11-09-07.13.49.jpg' %}" alt="#" class="img-fluid" >
             <img src="{% static 'img/banner_pattern.png' %}" alt="#" class="pattern_img img-fluid">
         </div>
     </section>
@@ -207,12 +200,12 @@
             <div class="row justify-content-between">
                 <div class="col-lg-6">
                     <div class="feature_part_tittle">
-                        <h3>با استفاده از مواد ارگانیک، محصولات استانداردی در اینجا تولید می شود.</h3>
+                        <h3>با استفاده از پارچه های با کیفیت, محصولات استانداردی در اینجا تولید می شود.</h3>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="feature_part_content">
-                        <p>شرکت ما با بهره گیری از استراتژی های مختلف و استفاده از مواد ارگانیک و طبیعی سعی در تولید محصولاتی با کیفیت و مطابق نیاز شما دارد.</p>
+                        <p>شرکت ما با بهره گیری از استراتژی های مختلف و استفاده از پارچه های باکیفیت سعی در تولید محصولاتی با کیفیت و مطابق نیاز شما دارد.</p>
                     </div>
                 </div>
             </div>
@@ -280,20 +273,15 @@
                             </div>
                             <div class="footer_menu_item">
                                 <a href="{% url 'home' %}">صفحه اصلی</a>
-
                                 <a href="{% url 'shop' %}">محصولات</a>
-                                <a href="#">صفحات</a>
-                                <a href="blog/">وبلاگ</a>
-                                <a href="contact.html">تماس با ما</a>
+                                <a href="{% url 'post_page' %}">وبلاگ</a>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="social_icon">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -307,13 +295,13 @@
                         <div class="copyright_text">
                             <p>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
-                            <p>فارسی و راست چین شده<i  aria-hidden="true"></i> توسط <a href="https://webrubik.com/" target="-blank">Webrubik.com </a>- غزاله نظام</p>
+                            <p>آدرس : تهران ، خیابان ولیعصر، نرسیده به چهار راه ولیعصر، نبش کوچه محتشم، ساختمان پیروز، طبقه اول پلاک 1/1
+                                تماس: 02166460771
+                                
+                                ساعت کاری : 11 صبح – 5:00 عصر</p>
                             <div class="copyright_link"></div>
-                                <a href="#">ضوابط و شرایط</a>
-                                <a href="#">FAQ</a>
                             </div>
                         </div>
                     </div>

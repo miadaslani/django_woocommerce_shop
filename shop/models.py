@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 # Create your models here.
 
 #-------------------------- navbar مدل تغییر اسم بالای صفحه
@@ -74,9 +76,10 @@ class Product(models.Model):
     sale_price = models.DecimalField(default=0, decimal_places=0, max_digits=12,verbose_name='قیمت تخفیف')
     slug=models.SlugField(default='',null=False,db_index=True,verbose_name='اسلاگ')
 
-
+    
     def save(self,*args,**kwargs):
-        self.slug=slugify(self.name+'-'+self.description)
+        if not self.slug:
+            self.slug=slugify(self.name+'-'+self.description)
         super().save(*args,**kwargs)
 
 
@@ -90,7 +93,7 @@ class Product(models.Model):
 #--------------------مدل سبد خرید
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    products = models.ManyToManyField('Product', related_name='carts')
+    products = models.ManyToManyField(Product)
     created_at = models.DateTimeField(auto_now_add=True) 
 
     def __str__(self):

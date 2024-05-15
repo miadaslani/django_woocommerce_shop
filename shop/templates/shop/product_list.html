@@ -38,7 +38,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href=""> <img src="{{MEDIA_URL}}{% for i in a %}{{i.logo}}{% endfor %}" alt="logo"> </a>
+                        <a class="navbar-brand" href="{% url 'home' %}"> <img src="{{MEDIA_URL}}{% for i in a %}{{i.logo}}{% endfor %}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -48,53 +48,47 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/">{% for i in a %}{{i.name1}}{% endfor %}</a>
+                                    <a class="nav-link" href="{% url 'home' %}">{% for i in a %}{{i.name1}}{% endfor %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/about/">{% for i in a %}{{i.name2}}{% endfor %}</a>
+                                    <a class="nav-link" href="{% url 'about' %}">{% for i in a %}{{i.name2}}{% endfor %}</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/blog/" id="navbarDropdown_1"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name3}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="{% url 'shop' %}"> لیست محصولات</a>
-                                        <a class="dropdown-item" href="single-product.html">جزئیات محصولات</a>
                                         
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/blog/" id="navbarDropdown_3"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name4}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/shop/login/"> 
+                                        <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                             ورود
                                             
                                         </a>
-                                        <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
                                         <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
-                                        <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                        <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                       
                                     </div>
                                 </li>
                                 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/blog/" id="navbarDropdown_2"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% for i in a %}{{i.name5}}{% endfor %}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/blog/"> وبلاگ</a>
-                                        <a class="dropdown-item" href="single-blog.html">صفحه داخلی وبلاگ </a>
+                                        <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
                                     </div>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">{% for i in a %}{{i.name6}}{% endfor %}</a>
-                                </li>
+                                
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex align-items-center">
@@ -137,38 +131,8 @@
     <section class="product_list section_padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="product_sidebar">
-                        <div class="single_sedebar">
-                            <form action="#">
-                                <input type="text" name="#" placeholder="جست و جو">
-                                <i class="ti-search"></i>
-                            </form>
-                        </div>
-                        <div class="single_sedebar">
-                            <div class="select_option">
-                                <div class="select_option_list">دسته ها <i class="right fas fa-caret-down"></i> </div>
-                                <div class="select_option_dropdown">
-                                    <p><a href="#">دسته 1</a></p>
-                                    <p><a href="#">دسته 2</a></p>
-                                    <p><a href="#">دسته 3</a></p>
-                                    <p><a href="#">دسته 4</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_sedebar">
-                            <div class="select_option">
-                                <div class="select_option_list">مدل <i class="right fas fa-caret-down"></i> </div>
-                                <div class="select_option_dropdown">
-                                    <p><a href="#">مدل 1</a></p>
-                                    <p><a href="#">مدل 2</a></p>
-                                    <p><a href="#">مدل 3</a></p>
-                                    <p><a href="#">مدل 4</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                
                 <div class="col-md-8">
                     <div class="product_list">
                         <div class="row">
@@ -193,101 +157,15 @@
     <!-- product list part end-->
     
     <!-- client review part here -->
-    <section class="client_review">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="client_review_slider owl-carousel" dir="ltr">
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client.png' %}" alt="#">
-                            </div>
-                            <p>"استفاده از بالش های طبی را در سفرهای طولانی مدت پیشنهاد می کنم.</p>
-                            <h5>- رضا محمدی</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_1.png' %}" alt="#">
-                            </div>
-                            <p>"برای جلوگیری از گردن درد گزینه های مناسبی هستند.</p>
-                            <h5>- امیر امیری</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_2.png' %}" alt="#">
-                            </div>
-                            <p>"برای نشستن های طولانی مدت روی مبل قابل قبول اند.</p>
-                            <h5>- محمد موسوی</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- client review part end -->
 
     <!-- feature part here -->
-    <section class="feature_part section_padding">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-6">
-                    <div class="feature_part_tittle">
-                        <h3>با استفاده از مواد ارگانیک، محصولات استانداردی در اینجا تولید می شود.</h3>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="feature_part_content">
-                        <p>“شرکت ما با بهره گیری از استراتژی های مختلف و استفاده از مواد ارگانیک و طبیعی سعی در تولید محصولاتی با کیفیت و مطابق نیاز شما دارد.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="{% static 'img/icon/feature_icon_1.svg' %}" alt="#">
-                        <h4>پشتیبانی کارت های اعتباری</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="{% static 'img/icon/feature_icon_2.svg' %}" alt="#">
-                        <h4>سفارش آنلاین</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="{% static 'img/icon/feature_icon_3.svg' %}" alt="#">
-                        <h4>تحویل رایگان</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="{% static 'img/icon/feature_icon_4.svg' %}" alt="#">
-                        <h4>محصولات همراه با جایزه</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- feature part end -->
 
     <!-- subscribe part here -->
-    <section class="subscribe_part section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="subscribe_part_content">
-                        <h2>به روز رسانی و مطالب پیشرفته!</h2>
-                        <p>ما سعی در ارائه محصولات با کیفیت تر و با دوام تر با توجه با استانداردهای روز جهان داریم .</p>
-                        <div class="subscribe_form">
-                            <input type="email" placeholder="ایمیل خود را وارد کنید">
-                            <a href="#" class="btn_1">تایید پرداخت</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- subscribe part end -->
 
     <!--::footer_part start::-->
@@ -298,24 +176,19 @@
                         <div class="col-lg-8">
                             <div class="footer_menu">
                                 <div class="footer_logo">
-                                    <a href="http://127.0.0.1:8000/"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+                                    <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
                                 </div>
                                 <div class="footer_menu_item">
-                                    <a href="http://127.0.0.1:8000/">صفحه اصلی</a>
+                                    <a href="{% url 'home' %}">صفحه اصلی</a>
 
                                     <a href="{% url 'shop' %}">محصولات</a>
-                                    <a href="#">صفحات</a>
-                                    <a href="http://127.0.0.1:8000/blog/">وبلاگ</a>
-                                    <a href="contact.html">تماس با ما</a>
+                                    <a href="{% url 'post_page' %}">وبلاگ</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="social_icon">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -328,16 +201,13 @@
                         <div class="col-lg-12">
                             <div class="copyright_text">
                                 <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
-                                <p>فارسی و راست چین شده<i class="ti-heart" aria-hidden="true"></i> توسط <a
-                                        href="https://webrubik.com/" target="-blank">Webrubik.com </a>- غزاله نظام
+                                <p>آدرس : تهران ، خیابان ولیعصر، نرسیده به چهار راه ولیعصر، نبش کوچه محتشم، ساختمان پیروز، طبقه اول پلاک 1/1
+                                    تماس: 02166460771
+                                    
+                                    ساعت کاری : 11 صبح – 5:00 عصر
                                 </p>
-                                <div class="copyright_link">
-                                    <a href="#">ضوابط و شرایط</a>
-                                    <a href="#">FAQ</a>
-                                    <p>{{name_records.name1}}</p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

@@ -48,50 +48,44 @@
                                     <a class="nav-link" href="{% url 'home' %}">صفحه اصلی</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/about/">درباره ما</a>
+                                    <a class="nav-link" href="{% url 'about' %}">درباره ما</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         محصولات
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/shop/"> لیست محصولات</a>
-                                        <a class="dropdown-item" href="single-product.html">جزئیات محصولات</a>
+                                        <a class="dropdown-item" href="{% url 'home' %}"> لیست محصولات</a>
                                         
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         صفحات
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="login.html"> 
+                                        <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                             ورود
                                             
                                         </a>
-                                        <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
                                         <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
-                                        <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                        <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                 
                                     </div>
                                 </li>
                                 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         وبلاگ
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/blog/"> وبلاگ</a>
-                                        <a class="dropdown-item" href="single-blog.html">صفحه داخلی وبلاگ</a>
+                                        <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
                                     </div>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">تماس با ما</a>
-                                </li>
+                               
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex align-items-center">
@@ -150,7 +144,7 @@
                 {{name_details.description}}-----
                 از برند{{name_details.brand.name}}
                 <br>
-                manufacture  : {{name_details.manufacture.name}}
+                کمپانی  : {{name_details.manufacture.name}}
                 <br>
                 این محصول توسط 
                 {% for i in name_details.customer.all %}
@@ -177,22 +171,7 @@
   </div>
   <!--================End Single Product Area =================-->
    <!-- subscribe part here -->
-   <section class="subscribe_part section_padding">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-lg-8">
-                  <div class="subscribe_part_content">
-                      <h2>به روز رسانی و مطالب پیشرفته!</h2>
-                      <p>ما سعی در ارائه محصولات با کیفیت تر و با دوام تر با توجه با استانداردهای روز جهان داریم .</p>
-                      <div class="subscribe_form">
-                          <input type="email" placeholder="ایمیل خود را وارد کنید">
-                          <a href="#" class="btn_1">تایید پرداخت</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+
   <!-- subscribe part end -->
 
   <!--::footer_part start::-->
@@ -209,18 +188,14 @@
                                 <a href="{% url 'home' %}">صفحه اصلی</a>
 
                                 <a href="{% url 'shop' %}">محصولات</a>
-                                <a href="#">صفحات</a>
-                                <a href="blog.html">وبلاگ</a>
-                                <a href="contact.html">تماس با ما</a>
+                                <a href="{% url 'post_page' %}">وبلاگ</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="social_icon">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                           
                         </div>
                     </div>
                 </div>
@@ -233,15 +208,13 @@
                     <div class="col-lg-12">
                         <div class="copyright_text">
                             <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
-                            <p>فارسی و راست چین شده<i class="ti-heart" aria-hidden="true"></i> توسط <a
-                                    href="https://webrubik.com/" target="-blank">Webrubik.com </a>- غزاله نظام
+                            <p>آدرس : تهران ، خیابان ولیعصر، نرسیده به چهار راه ولیعصر، نبش کوچه محتشم، ساختمان پیروز، طبقه اول پلاک 1/1
+                                تماس: 02166460771
+                                
+                                ساعت کاری : 11 صبح – 5:00 عصر
                             </p>
-                            <div class="copyright_link">
-                                <a href="#">ضوابط و شرایط</a>
-                                <a href="#">FAQ</a>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

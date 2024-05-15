@@ -24,7 +24,7 @@
                                 <a class="nav-link" href="{% url 'home' %}">صفحه اصلی</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/about/">درباره ما</a>
+                                <a class="nav-link" href="{% url 'about' %}">درباره ما</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_1"
@@ -33,7 +33,6 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                     <a class="dropdown-item" href="{% url 'shop' %}"> لیست محصولات</a>
-                                    <a class="dropdown-item" href="single-product.html">جزئیات محصولات</a>
                                     
                                 </div>
                             </li>
@@ -43,14 +42,12 @@
                                     صفحات
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                    <a class="dropdown-item" href="login.html"> 
+                                    <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                         ورود
                                         
                                     </a>
-                                    <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
                                     <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
-                                    <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                    <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                  
                                 </div>
                             </li>
                             
@@ -61,13 +58,11 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                     <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
-                                    <a class="dropdown-item" href="single-blog.html">صفحه داخلی وبلاگ</a>
+                             
                                 </div>
                             </li>
                             
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">تماس با ما</a>
-                            </li>
+                           
                         </ul>
                     </div>
                     <div class="hearer_icon d-flex align-items-center">
@@ -133,16 +128,15 @@
                             <a href="{% url 'shop' %}">محصولات</a>
                             <a href="#">صفحات</a>
                             <a href="{% url 'post_page' %}">وبلاگ</a>
-                            <a href="contact.html">تماس با ما</a>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="social_icon">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                       
                     </div>
                 </div>
             </div>
@@ -155,13 +149,11 @@
                 <div class="col-lg-12">
                     <div class="copyright_text">
                         <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+
                         </p>
-                        <div class="copyright_link">
-                            <a href="#">ضوابط و شرایط</a>
-                            <a href="#">FAQ</a>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

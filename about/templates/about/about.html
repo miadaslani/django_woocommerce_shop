@@ -56,7 +56,7 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="{% url 'shop' %}"> لیست محصولات</a>
-                                        <a class="dropdown-item" href="single-product.html">جزئیات محصولات</a>
+                                       
                                         
                                     </div>
                                 </li>
@@ -66,14 +66,12 @@
                                         صفحات
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="login.html"> 
+                                        <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                             ورود
                                             
                                         </a>
-                                        <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
                                         <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
-                                        <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                        <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                        
                                     </div>
                                 </li>
                                 
@@ -84,13 +82,11 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                         <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
-                                        <a class="dropdown-item" href="single-blog.html">صفحه داخلی وبلاگ</a>
+                                        
                                     </div>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">تماس با ما</a>
-                                </li>
+                                
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex align-items-center">
@@ -135,12 +131,30 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="about_us_content">
-                        <h5>هدف ما</h5>
-                        <h3>هدف ما در این مجموعه تولید محصولات زیبا و با کیفیت در راستای جلب رضایت شماست.</h3>
-                        <div class="about_us_video">
-                            <img src="{% static 'img/about_us_video.png' %}" alt="#" class="img-fluid">
-                            <a class="about_video_icon popup-youtube" href="https://www.youtube.com/watch?v=DWHB6nTyKDI"></a>
-                        </div>
+                        
+                        <h3>
+                            
+                            🌟 تجربه لذت و شیک بودن با مزون اصلانی! 🌟
+                            
+                            آیا به دنبال یک تجربه خرید منحصر به فرد و استثنایی هستید؟ مزون اصلانی با بیش از ۳۰ سال تجربه در تولید مانتو و پالتو، آماده به خدمت رسانی به شماست.
+                            
+                            در مزون اصلانی، هر لحظه از تجربه خرید شما به یک سفر شیک و زیبا تبدیل می‌شود. ما به شما ارائه می‌دهیم:
+                            
+                            👗 مانتوها و پالتوهایی با طراحی‌های بی‌نظیر که به شما لمسی از شیاکی و زیبایی می‌بخشند.
+                            
+                            🛍️ مجموعه‌ای از جدیدترین مدل‌ها و الگوهای مد روز که با ذوق و تخصص تیم ما طراحی شده‌اند.
+                            
+                            💼 خدمات دوخت و سفارشی‌سازی به اندازه شما که به شما اجازه می‌دهد محصولی بی‌نظیر و اختصاصی داشته باشید.
+                            
+                            🤝 تضمین کیفیت و رضایت کامل مشتریان، که همواره از اصلانی، نشان‌دهنده تعهد ما به ارائه بهترین‌هاست.
+                            
+                            همراه ما باشید و از تجربه خرید لذت‌بخش در مزون اصلانی بهره‌مند شوید. برای اطلاعات بیشتر و یا رزرو وقت، با ما تماس بگیرید.
+                            
+                            📍 موقعیت ما: [آدرس : تهران ، خیابان ولیعصر، نرسیده به چهار راه ولیعصر، نبش کوچه محتشم، ساختمان پیروز، طبقه اول پلاک 1/1]
+                            📞 تماس: [09912240717]
+                            
+                            با مزون اصلانی، لحظات خاصی را تجربه کنید و به شیاکی و زیبایی تازه‌ای دست پیدا کنید.</h3>
+
                     </div>
                 </div>
             </div>
@@ -151,18 +165,7 @@
     <!-- feature part here -->
     <section class="feature_part section_padding">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-6">
-                    <div class="feature_part_tittle">
-                        <h3>با استفاده از مواد ارگانیک، محصولات استانداردی در اینجا تولید می شود.</h3>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="feature_part_content">
-                        <p>شرکت ما با بهره گیری از استراتژی های مختلف و استفاده از مواد ارگانیک و طبیعی سعی در تولید محصولاتی با کیفیت و مطابق نیاز شما دارد.</p>
-                    </div>
-                </div>
-            </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_feature_part">
@@ -194,56 +197,10 @@
     <!-- feature part end -->
     
     <!-- client review part here -->
-    <section class="client_review">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="client_review_slider owl-carousel" dir="ltr">
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client.png' %}" alt="#">
-                            </div>
-                            <p>"استفاده از بالش های طبی را در سفرهای طولانی مدت پیشنهاد می کنم.</p>
-                            <h5>- رضا محمدی</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_1.png' %}" alt="#">
-                            </div>
-                            <p>"برای جلوگیری از گردن درد گزینه های مناسبی هستند.</p>
-                            <h5>- امیر امیری</h5>
-                        </div>
-                        <div class="single_client_review" dir="rtl">
-                            <div class="client_img">
-                                <img src="{% static 'img/client_2.png' %}" alt="#">
-                            </div>
-                            <p>"برای نشستن های طولانی مدت روی مبل قابل قبول اند.</p>
-                            <h5>- محمد موسوی</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- client review part end -->
 
     <!-- subscribe part here -->
-    <section class="subscribe_part section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="subscribe_part_content" style="direction: rtl">
-                        <h2>به روز رسانی و مطالب پیشرفته!</h2>
-                        <p>ما سعی در ارائه محصولات با کیفیت تر و با دوام تر با توجه با استانداردهای روز جهان داریم .</p>
-                        <div class="subscribe_form">
-                            <input type="email" placeholder="ایمیل خود را وارد کنید">
-                            <a href="#" class="btn_1">تایید پرداخت</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- subscribe part end -->
 
     <!--::footer_part start::-->
@@ -260,18 +217,14 @@
                                     <a href="{% url 'home' %}">صفحه اصلی</a>
 
                                     <a href="{% url 'shop' %}">محصولات</a>
-                                    <a href="#">صفحات</a>
                                     <a href="{% url 'post_page' %}">وبلاگ</a>
-                                    <a href="contact.html">تماس با ما</a>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="social_icon">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -292,8 +245,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 ساعت کاری : 11 صبح – 5:00 عصر
                                 </p>
                                 <div class="copyright_link">
-                                    <a href="#">ضوابط و شرایط</a>
-                                    <a href="#">FAQ</a>
                                 </div>
                             </div>
                         </div>

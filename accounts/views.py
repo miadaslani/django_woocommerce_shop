@@ -17,7 +17,7 @@ def viewRegister(request):
                                      first_name=data['first_name'],
                                      last_name=data['last_name'],
                                      password=data['password_2'])
-            login(request, request.user)
+            
             return HttpResponse('Successfully')
     else:
         form_register=UserRegisterForm()

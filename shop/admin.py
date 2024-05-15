@@ -13,7 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ['name','description','manufacture','price']
     list_filter = ['price']
     list_editable = ['price']
-    prepopulated_fields = {'slug':['name','description','manufacture']}
+    prepopulated_fields = {'slug':['name','description']}
 
 
 
@@ -27,4 +27,6 @@ admin.site.register(Brand,BrandAdmin)
 admin.site.register(Customer)
 admin.site.register(Manufacture)
 admin.site.register(Counseling)
+ 
+
 

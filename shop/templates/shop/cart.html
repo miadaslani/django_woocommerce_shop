@@ -47,10 +47,10 @@
                                     <a class="nav-link" href="{% url 'home' %}">صفحه اصلی</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/about/">درباره ما</a>
+                                    <a class="nav-link" href="{% url 'about' %}">درباره ما</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         محصولات
                                     </a>
@@ -61,42 +61,38 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/blog/" id="navbarDropdown_3"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_3"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         صفحات
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/accounts/"> 
+                                        <a class="dropdown-item" href="{% url 'viewRegister' %}"> 
                                             ورود
                                             
                                         </a>
-                                        <a class="dropdown-item" href="checkout.html">چک کردن محصولات</a>
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/shop/cart/">سبد خرید</a>
-                                        <a class="dropdown-item" href="confirmation.html">تایید نهایی</a>
-                                        <a class="dropdown-item" href="elements.html">جزئیات</a>
+                                        <a class="dropdown-item" href="{% url 'cart_view' %}">سبد خرید</a>
+                                    
                                     </div>
                                 </li>
                                 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/blog/" id="navbarDropdown_2"
+                                    <a class="nav-link dropdown-toggle" href="{% url 'post_page' %}" id="navbarDropdown_2"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         وبلاگ
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="http://127.0.0.1:8000/blog/"> وبلاگ</a>
+                                        <a class="dropdown-item" href="{% url 'post_page' %}"> وبلاگ</a>
                         
                                     </div>
                                 </li>
                                 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">تماس با ما</a>
-                                </li>
+                               
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex align-items-center">
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                             <div class="dropdown cart">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                                <a class="dropdown-toggle" href="" id="navbarDropdown3" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="flaticon-shopping-cart-black-shape"></i>
                                 </a>
@@ -197,56 +193,11 @@
                   <h5>{{total_price}} تومان</h5>
                 </td>
               </tr>
-              <tr class="shipping_area"  dir="ltr">
-                <td></td>
-                <td></td>
-                <td>
-                  <h5></h5>
-                </td>
-                <td>
-                  <div class="shipping_box" >
-                    <ul class="list">
-                      <li>
-                          تعرفه ثابت: 30000 تومان
-                        <input type="radio" aria-label="Radio button for following text input">
-                      </li>
-                      <li>
-                        ارسال کالای رایگان
-                        <input type="radio" aria-label="Radio button for following text input">
-                      </li>
-                      <li>
-                        تعرفه ثابت: 30000 تومان
-                        <input type="radio" aria-label="Radio button for following text input">
-                      </li>
-                      <li class="active">
-                        تحویل محلی: 20000 تومان
-                        <input type="radio" aria-label="Radio button for following text input">
-                      </li>
-                    </ul>
-                    <h6>
-                      هزینه ارسال کالا
-                      <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </h6>
-                    <select class="shipping_select" >
-                      <option value="1">ایران</option>
-                      <option value="2">هند</option>
-                      <option value="4">پاکستان</option>
-                    </select>
-                    <select class="shipping_select section_bg" >
-                      <option value="1">یک منطقه را انتخاب کنید</option>
-                      <option value="2">یک منطقه را انتخاب کنید</option>
-                      <option value="4">یک منطقه را انتخاب کنید</option>
-                    </select>
-                    <input class="post_code" type="text" placeholder="کدپستی" />
-                    <a class="btn_1" href="#">ویرایش جزئیات</a>
-                  </div>
-                </td>
-              </tr>
+              
             </tbody>
           </table>
           <div class="checkout_btn_inner float-right">
-            <a class="btn_1" href="#">ادامه خرید</a>
-            <a class="btn_1 checkout_btn_1" href="#">رفتن به قسمت چک کردن محصول</a>
+            <a class="btn_1" href="{% url 'checkout' %}">ادامه خرید</a>
           </div>
         </div>
       </div>
@@ -266,18 +217,14 @@
                                 <a href="{% url 'home' %}">صفحه اصلی</a>
 
                                 <a href="{% url 'shop' %}">محصولات</a>
-                                <a href="#">صفحات</a>
-                                <a href="blog.html">وبلاگ</a>
-                                <a href="contact.html">تماس با ما</a>
+                                <a href="{% url 'post_page' %}">وبلاگ</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="social_icon">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                       
                         </div>
                     </div>
                 </div>
@@ -290,13 +237,9 @@
                     <div class="col-lg-12">
                         <div class="copyright_text">
                             <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
                             </p>
-                            <div class="copyright_link">
-                                <a href="#">ضوابط و شرایط</a>
-                                <a href="#">FAQ</a>
-                            </div>
+                         
                         </div>
                     </div>
                 </div>
